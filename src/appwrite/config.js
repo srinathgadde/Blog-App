@@ -14,8 +14,6 @@ export class Service {
     this.bucket = new Storage(this.client);
   }
 
-  // post related services
-
   async createPost({ title, slug, content, featuredImage, status, userId }) {
     try {
       return await this.databases.createDocument(
@@ -31,7 +29,7 @@ export class Service {
         }
       );
     } catch (error) {
-      console.log("Appwrite service :: createPost :: error", error);
+      console.log("Appwrite serive :: createPost :: error", error);
     }
   }
 
@@ -49,7 +47,7 @@ export class Service {
         }
       );
     } catch (error) {
-      console.log("Appwrite service :: createPost :: error", error);
+      console.log("Appwrite serive :: updatePost :: error", error);
     }
   }
 
@@ -62,7 +60,7 @@ export class Service {
       );
       return true;
     } catch (error) {
-      console.log("Appwrite service :: createPost :: error", error);
+      console.log("Appwrite serive :: deletePost :: error", error);
       return false;
     }
   }
@@ -75,7 +73,7 @@ export class Service {
         slug
       );
     } catch (error) {
-      console.log("Appwrite service :: createPost :: error", error);
+      console.log("Appwrite serive :: getPost :: error", error);
       return false;
     }
   }
@@ -88,12 +86,12 @@ export class Service {
         queries
       );
     } catch (error) {
-      console.log("Appwrite service :: createPost :: error", error);
+      console.log("Appwrite serive :: getPosts :: error", error);
       return false;
     }
   }
 
-  // file upload services
+  // file upload service
 
   async uploadFile(file) {
     try {
@@ -103,7 +101,7 @@ export class Service {
         file
       );
     } catch (error) {
-      console.log("Appwrite service :: createPost :: error", error);
+      console.log("Appwrite serive :: uploadFile :: error", error);
       return false;
     }
   }
@@ -113,7 +111,7 @@ export class Service {
       await this.bucket.deleteFile(conf.appwriteBucketId, fileId);
       return true;
     } catch (error) {
-      console.log("Appwrite service :: createPost :: error", error);
+      console.log("Appwrite serive :: deleteFile :: error", error);
       return false;
     }
   }

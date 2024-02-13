@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import "./App.css";
 import authService from "./appwrite/auth";
@@ -28,8 +28,7 @@ function App() {
       <div className="w-full block">
         <Header />
         <main>
-          TODO:
-          <Outlet />
+          TODO: <Outlet />
         </main>
         <Footer />
       </div>
