@@ -1,0 +1,19 @@
+{
+  "folders": [
+	{
+		"path": "../../../../Demo"
+	},
+	{
+		"path": "../../.."
+	},
+	{
+		"path": "../../../../react-practice"
+	},
+	{
+		"path": "../../../../mern-expense-tracker-main"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "react-practice"
+  }
+}
